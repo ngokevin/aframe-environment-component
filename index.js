@@ -185,7 +185,7 @@ AFRAME.registerComponent('environment', {
     });
     this.sunlight = document.createElement('a-entity');
     this.sunlight.setAttribute('position', this.data.lightPosition);
-    this.sunlight.setAttribute('light', {intensity: 0.6});
+    this.sunlight.setAttribute('light', {castShadow: true, intensity: 0.6});
 
     // add everything to the scene
     this.el.appendChild(this.hemilight);
@@ -1287,3 +1287,4 @@ PerlinNoise.prototype.noise = function(x, y, z) {
 
   return nxyz;
 };
+
